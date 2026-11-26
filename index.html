@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Elias's Boutique: descubre ropa, calzado y accesorios.">
+
+    <title>Inicio | Elias's Boutique</title>
+
+    <!-- Fuentes de Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Hoja de estilos -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer></script>
+
+    <!-- JavaScript del carrito -->
+    <script src="carrito.js" defer></script>
+
+
+</head>
+
+<body>
+
+    <!-- ENCABEZADO Y NAVEGACIÓN -->
+    <header class="encabezado">
+
+        <a class="logo" href="index.html">
+            Elias's Boutique
+        </a>
+        <button
+    class="boton-menu"
+    id="boton-menu"
+    type="button"
+    aria-label="Abrir menú"
+    aria-expanded="false"
+    aria-controls="menu-principal"
+>
+    ☰
+</button>
+
+        <nav class="navegacion" id="menu-principal" aria-label="Navegación principal">
+
+            <a class="activo" href="index.html">Inicio</a>
+
+            <a href="productos.html">Productos</a>
+
+            <a href="servicios.html">Servicios</a>
+
+            <a href="contacto.html">Contacto</a>
+
+            <button
+                class="enlace-carrito"
+                id="abrir-carrito"
+                type="button"
+            >
+                Carrito (
+                <span id="contador-carrito">0</span>
+                )
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+        <!-- BANNER PRINCIPAL -->
+        <section class="hero-inicio">
+
+            <img
+                src="imagen2.jpg.jpg"
+                alt="Imagen principal de Elias's Boutique"
+            >
+
+            <article class="contenido-hero">
+
+                <p class="subtitulo">
+                    ESTILO Y ELEGANCIA
+                </p>
+
+                <h1>
+                    Elias's Boutique
+                </h1>
+
+                <p>
+                    Descubre prendas, calzado y accesorios
+                    para expresar tu propio estilo.
+                </p>
+
+                <a class="boton" href="productos.html">
+                    Ver productos
+                </a>
+
+            </article>
+
+        </section>
+
+
+        <!-- PRESENTACIÓN -->
+        <section class="presentacion">
+
+            <p class="subtitulo">
+                CONÓCENOS
+            </p>
+
+            <h2>
+                Sobre nuestra boutique
+            </h2>
+
+            <p>
+                En Elias's Boutique buscamos ofrecer una
+                experiencia de compra sencilla, con productos
+                seleccionados para complementar diferentes
+                estilos y ocasiones.
+            </p>
+
+        </section>
+
+
+        <!-- PRODUCTOS DESTACADOS -->
+        <section class="destacados">
+
+            <h2>
+                Productos destacados
+            </h2>
+
+            <section class="rejilla-productos">
+
+                <!-- PRODUCTO 1 -->
+                <article class="tarjeta-producto">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=700"
+                        alt="Vestido elegante"
+                    >
+
+                    <h3>
+                        Vestido elegante
+                    </h3>
+
+                    <p>
+                        Una opción para ocasiones especiales.
+                    </p>
+
+                    <p class="precio">
+                        $650.00
+                    </p>
+
+                    <a
+                        class="boton"
+                        href="detalle-producto.html?id=1"
+                    >
+                        Ver producto
+                    </a>
+
+                </article>
+
+
+                <!-- PRODUCTO 2 -->
+                <article class="tarjeta-producto">
+
+                    <img
+                        src="https://www.coppel.com/blog/wp-content/uploads/2025/12/outfit-de-falda-y-botas.webp"
+                        alt="Conjunto casual"
+                    >
+
+                    <h3>
+                        Conjunto casual
+                    </h3>
+
+                    <p>
+                        Comodidad para todos los días.
+                    </p>
+
+                    <p class="precio">
+                        $780.00
+                    </p>
+
+                    <a
+                        class="boton"
+                        href="detalle-producto.html?id=2"
+                    >
+                        Ver producto
+                    </a>
+
+                </article>
+
+
+                <!-- PRODUCTO 3 -->
+                <article class="tarjeta-producto">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=700"
+                        alt="Bolso clásico"
+                    >
+
+                    <h3>
+                        Bolso clásico
+                    </h3>
+
+                    <p>
+                        Un accesorio práctico y versátil.
+                    </p>
+
+                    <p class="precio">
+                        $520.00
+                    </p>
+
+                    <a
+                        class="boton"
+                        href="detalle-producto.html?id=3"
+                    >
+                        Ver producto
+                    </a>
+
+                </article>
+
+            </section>
+
+
+            <a class="boton" href="productos.html">
+                Explorar catálogo
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie-pagina">
+
+        <p>
+            © 2026 Elias's Boutique.
+            Todos los derechos reservados.
+        </p>
+
+        <p>
+            Estilo para cada ocasión.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Detalle del producto | Elias's Boutique</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="main.js" defer></script>
+    <script src="detalle.js" defer></script>
+    <script src="carrito.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="encabezado">
+
+        <a class="logo" href="index.html">
+            Elias's Boutique
+        </a>
+    
+        <button
+            class="boton-menu"
+            id="boton-menu"
+            type="button"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+            aria-controls="menu-principal"
+        >
+            ☰
+        </button>
+    
+        <nav
+            class="navegacion"
+            id="menu-principal"
+            aria-label="Navegación principal"
+        >
+            <a href="index.html">Inicio</a>
+            <a href="productos.html">Productos</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="contacto.html">Contacto</a>
+    
+            <button
+                id="abrir-carrito"
+                class="enlace-carrito"
+                type="button"
+            >
+                Carrito (<span id="contador-carrito">0</span>)
+            </button>
+        </nav>
+    
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+        <section class="titulo-pagina">
+            <h1>Detalle del producto</h1>
+            <p>Conoce más sobre nuestros productos.</p>
+        </section>
+
+
+        <!-- INFORMACIÓN DEL PRODUCTO -->
+        <section class="detalle-producto">
+
+    <figure class="imagen-detalle">
+        <img id="imagen-detalle" src="" alt="Imagen del producto">
+
+        <figcaption id="categoria-detalle">
+            Colección destacada
+        </figcaption>
+    </figure>
+
+    <article class="informacion-producto">
+
+        <p class="subtitulo">COLECCIÓN DESTACADA</p>
+
+        <h2 id="nombre-detalle">Cargando producto...</h2>
+
+        <p class="precio" id="precio-detalle"></p>
+
+        <p id="descripcion-detalle"></p>
+
+        <p><strong>Disponibilidad:</strong> Disponible</p>
+
+        <label for="talla-detalle">Selecciona tu talla:</label>
+
+        <select id="talla-detalle" class="selector-talla">
+            <option value="">Selecciona una talla</option>
+            <option value="CH">CH</option>
+            <option value="M">M</option>
+            <option value="G">G</option>
+            <option value="XG">XG</option>
+            <option value="Pequeño">Pequeño</option>
+            <option value="Mediano">Mediano</option>
+            <option value="Grande">Grande</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+        </select>
+
+        <label for="cantidad-detalle">Cantidad:</label>
+
+        <select id="cantidad-detalle" class="selector-cantidad">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+
+        <button
+            id="boton-agregar"
+            class="boton agregar-carrito"
+            type="button"
+            data-talla="talla-detalle"
+            data-cantidad="cantidad-detalle">
+            Agregar al carrito
+        </button>
+
+        <a class="volver-productos" href="productos.html">
+            Volver al catálogo
+        </a>
+
+    </article>
+
+</section>
+
+        </main>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie-pagina">
+
+        <p>© 2026 Elias's Boutique. Todos los derechos reservados.</p>
+
+        <p>Estilo para cada ocasión.</p>
+
+    </footer>
+
+</body>
+</html>

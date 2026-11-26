@@ -1,0 +1,436 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Productos | Elias's Boutique</title>
+
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer></script>
+
+    <!-- Carrito -->
+    <script src="carrito.js" defer></script>
+
+</head>
+
+<body>
+
+<!-- ENCABEZADO -->
+<header class="encabezado">
+
+    <a class="logo" href="index.html">
+        Elias's Boutique
+    </a>
+
+    <button
+        class="boton-menu"
+        id="boton-menu"
+        type="button"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="menu-principal"
+    >
+        ☰
+    </button>
+
+    <nav
+        class="navegacion"
+        id="menu-principal"
+        aria-label="Navegación principal"
+    >
+
+        <a href="index.html">Inicio</a>
+
+        <a class="activo" href="productos.html">Productos</a>
+
+        <a href="servicios.html">Servicios</a>
+
+        <a href="contacto.html">Contacto</a>
+
+        <button
+            class="enlace-carrito"
+            id="abrir-carrito"
+            type="button"
+        >
+            Carrito (
+            <span id="contador-carrito">0</span>
+            )
+        </button>
+
+    </nav>
+
+</header>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+        <section class="titulo-pagina">
+
+            <p class="subtitulo">DESCUBRE TU ESTILO</p>
+
+            <h1>Nuestros productos</h1>
+
+            <p>
+                Explora nuestra selección de ropa,
+                calzado y accesorios.
+            </p>
+
+        </section>
+
+
+        <!-- CATÁLOGO DE PRODUCTOS -->
+        <section class="catalogo" aria-label="Catálogo de productos">
+
+
+            <!-- PRODUCTO 1 -->
+            <article class="tarjeta-producto">
+
+                <img
+                    src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=800"
+                    alt="Vestido elegante"
+                >
+
+                <h2>Vestido elegante</h2>
+
+                <p>
+                    Una prenda ideal para ocasiones especiales.
+                </p>
+
+                <p class="precio">$650.00</p>
+
+                <label for="talla-1">Selecciona talla:</label>
+
+                <select class="selector-talla" id="talla-1">
+                    <option value="CH">CH</option>
+                    <option value="M">M</option>
+                    <option value="G">G</option>
+                    <option value="XG">XG</option>
+                </select>
+
+                <label for="cantidad-1">Cantidad:</label>
+
+                <select class="selector-cantidad" id="cantidad-1">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+
+                <button
+                    class="boton agregar-carrito"
+                    type="button"
+                    data-id="1"
+                    data-nombre="Vestido elegante"
+                    data-precio="650"
+                    data-talla="talla-1"
+                    data-cantidad="cantidad-1"
+                >
+                    Agregar al carrito
+                </button>
+
+                <a href="detalle-producto.html?id=1">
+                    Ver detalle
+                </a>
+
+            </article>
+
+
+            <!-- PRODUCTO 2 -->
+            <article class="tarjeta-producto">
+
+                <img
+                    src="https://www.coppel.com/blog/wp-content/uploads/2025/12/outfit-de-falda-y-botas.webp"
+                    alt="Conjunto casual"
+                >
+
+                <h2>Conjunto casual</h2>
+
+                <p>
+                    Comodidad y estilo para todos los días.
+                </p>
+
+                <p class="precio">$780.00</p>
+
+                <label for="talla-2">Selecciona talla:</label>
+
+                <select class="selector-talla" id="talla-2">
+                    <option value="CH">CH</option>
+                    <option value="M">M</option>
+                    <option value="G">G</option>
+                    <option value="XG">XG</option>
+                </select>
+
+                <label for="cantidad-2">Cantidad:</label>
+
+                <select class="selector-cantidad" id="cantidad-2">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+
+                <button
+                    class="boton agregar-carrito"
+                    type="button"
+                    data-id="2"
+                    data-nombre="Conjunto casual"
+                    data-precio="780"
+                    data-talla="talla-2"
+                    data-cantidad="cantidad-2"
+                >
+                    Agregar al carrito
+                </button>
+
+                <a href="detalle-producto.html?id=2">
+                    Ver detalle
+                </a>
+
+            </article>
+
+
+            <!-- PRODUCTO 3 -->
+            <article class="tarjeta-producto">
+
+                <img
+                    src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=800"
+                    alt="Bolso clásico"
+                >
+
+                <h2>Bolso clásico</h2>
+
+                <p>
+                    Un accesorio práctico y versátil.
+                </p>
+
+                <p class="precio">$520.00</p>
+
+                <label for="talla-3">Selecciona tamaño:</label>
+
+                <select class="selector-talla" id="talla-3">
+                    <option value="Pequeño">Pequeño</option>
+                    <option value="Mediano">Mediano</option>
+                    <option value="Grande">Grande</option>
+                </select>
+
+                <label for="cantidad-3">Cantidad:</label>
+
+                <select class="selector-cantidad" id="cantidad-3">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+
+                <button
+                    class="boton agregar-carrito"
+                    type="button"
+                    data-id="3"
+                    data-nombre="Bolso clásico"
+                    data-precio="520"
+                    data-talla="talla-3"
+                    data-cantidad="cantidad-3"
+                >
+                    Agregar al carrito
+                </button>
+
+                <a href="detalle-producto.html?id=3">
+                    Ver detalle
+                </a>
+
+            </article>
+
+
+            <!-- PRODUCTO 4 -->
+            <article class="tarjeta-producto">
+
+                <img
+                    src="https://dcdn-us.mitiendanube.com/stores/006/517/173/products/chatgpt-image-3-ago-2025-12_18_26-a-m-fd7c2ee904223d8fb617542019384405-1024-1024.webp"
+                    alt="Calzado moderno"
+                >
+
+                <h2>Calzado moderno</h2>
+
+                <p>
+                    Diseño para complementar tu outfit.
+                </p>
+
+                <p class="precio">$890.00</p>
+
+                <label for="talla-4">Selecciona talla:</label>
+
+                <select class="selector-talla" id="talla-4">
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                </select>
+
+                <label for="cantidad-4">Cantidad:</label>
+
+                <select class="selector-cantidad" id="cantidad-4">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+
+                <button
+                    class="boton agregar-carrito"
+                    type="button"
+                    data-id="4"
+                    data-nombre="Calzado moderno"
+                    data-precio="890"
+                    data-talla="talla-4"
+                    data-cantidad="cantidad-4"
+                >
+                    Agregar al carrito
+                </button>
+
+                <a href="detalle-producto.html?id=4">
+                    Ver detalle
+                </a>
+
+            </article>
+
+
+            <!-- PRODUCTO 5 -->
+            <article class="tarjeta-producto">
+
+                <img
+                    src="https://i.pinimg.com/736x/4e/58/d9/4e58d922b775aa27b019894134530c8b.jpg"
+                    alt="Blusa elegante"
+                >
+
+                <h2>Blusa elegante</h2>
+
+                <p>
+                    Una opción sencilla y sofisticada.
+                </p>
+
+                <p class="precio">$420.00</p>
+
+                <label for="talla-5">Selecciona talla:</label>
+
+                <select class="selector-talla" id="talla-5">
+                    <option value="CH">CH</option>
+                    <option value="M">M</option>
+                    <option value="G">G</option>
+                    <option value="XG">XG</option>
+                </select>
+
+                <label for="cantidad-5">Cantidad:</label>
+
+                <select class="selector-cantidad" id="cantidad-5">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+
+                <button
+                    class="boton agregar-carrito"
+                    type="button"
+                    data-id="5"
+                    data-nombre="Blusa elegante"
+                    data-precio="420"
+                    data-talla="talla-5"
+                    data-cantidad="cantidad-5"
+                >
+                    Agregar al carrito
+                </button>
+
+                <a href="detalle-producto.html?id=5">
+                    Ver detalle
+                </a>
+
+            </article>
+
+
+            <!-- PRODUCTO 6 -->
+            <article class="tarjeta-producto">
+
+                <img
+                    src="https://coachmx.vteximg.com.br/arquivos/ids/249174-400-400/cen85_b4de_1.jpg?v=639193229149670000"
+                    alt="Bolsa de moda"
+                >
+
+                <h2>Bolsa de moda</h2>
+
+                <p>
+                    Espacio y estilo para tus esenciales.
+                </p>
+
+                <p class="precio">$590.00</p>
+
+                <label for="talla-6">Selecciona tamaño:</label>
+
+                <select class="selector-talla" id="talla-6">
+                    <option value="Pequeño">Pequeño</option>
+                    <option value="Mediano">Mediano</option>
+                    <option value="Grande">Grande</option>
+                </select>
+
+                <label for="cantidad-6">Cantidad:</label>
+
+                <select class="selector-cantidad" id="cantidad-6">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+
+                <button
+                    class="boton agregar-carrito"
+                    type="button"
+                    data-id="6"
+                    data-nombre="Bolsa de moda"
+                    data-precio="590"
+                    data-talla="talla-6"
+                    data-cantidad="cantidad-6"
+                >
+                    Agregar al carrito
+                </button>
+
+                <a href="detalle-producto.html?id=6">
+                    Ver detalle
+                </a>
+
+            </article>
+
+        </section>
+
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie-pagina">
+
+        <p>
+            © 2026 Elias's Boutique.
+            Todos los derechos reservados.
+        </p>
+
+        <p>
+            Estilo para cada ocasión.
+        </p>
+
+    </footer>
+
+</body>
+</html>

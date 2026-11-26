@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Finalizar compra | Elias's Boutique</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="encabezado">
+
+        <a class="logo" href="index.html">
+            Elias's Boutique
+        </a>
+
+        <nav class="navegacion">
+            <a href="productos.html">Volver a productos</a>
+        </nav>
+
+    </header>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="checkout">
+
+        <section class="titulo-pagina">
+            <h1>Finalizar compra</h1>
+            <p>Revisa tu pedido y completa tus datos.</p>
+        </section>
+
+
+        <!-- RESUMEN DEL PEDIDO -->
+        <section class="resumen-checkout">
+
+            <h2>Resumen del pedido</h2>
+
+            <ul id="productos-checkout" class="lista-resumen">
+            </ul>
+
+            <p class="total-checkout">
+                Total:
+                <strong id="total-checkout">$0.00</strong>
+            </p>
+
+        </section>
+
+
+        <!-- FORMULARIO DE COMPRA -->
+        <form class="formulario" id="formulario-compra">
+
+            <label for="nombre-compra">
+                Nombre completo
+            </label>
+
+            <input
+                type="text"
+                id="nombre-compra"
+                required
+                minlength="3"
+            >
+
+
+            <label for="telefono-compra">
+                Teléfono
+            </label>
+
+            <input
+                type="tel"
+                id="telefono-compra"
+                pattern="[0-9]{10}"
+                maxlength="10"
+                required
+            >
+
+
+            <label for="correo-compra">
+                Correo electrónico
+            </label>
+
+            <input
+                type="email"
+                id="correo-compra"
+                required
+            >
+
+
+            <label for="direccion-compra">
+                Dirección de entrega
+            </label>
+
+            <textarea
+                id="direccion-compra"
+                rows="3"
+                required
+            ></textarea>
+
+
+            <label for="pago-compra">
+                Método de pago
+            </label>
+
+            <select id="pago-compra" required>
+
+                <option value="">
+                    Selecciona una opción
+                </option>
+
+                <option value="transferencia">
+                    Transferencia bancaria
+                </option>
+
+                <option value="deposito">
+                    Depósito
+                </option>
+
+            </select>
+
+
+            <button class="boton" type="submit">
+                Generar pedido
+            </button>
+
+            <p id="resultado-compra" role="status"></p>
+
+        </form>
+
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie-pagina">
+        <p>© 2026 Elias's Boutique.</p>
+        <p>Estilo para cada ocasión.</p>
+    </footer>
+
+
+    <!-- JAVASCRIPT DEL CHECKOUT -->
+    <script>
+
+        // Recuperar productos del carrito
+        const items = JSON.parse(
+            localStorage.getItem("carritoElias")
+        ) || [];
+
+        let total = 0;
+
+        const lista = document.getElementById(
+            "productos-checkout"
+        );
+
+        // Mostrar productos y calcular total
+        items.forEach(producto => {
+
+            const subtotal =
+                producto.precio * producto.cantidad;
+
+            total += subtotal;
+
+            const elemento = document.createElement("li");
+
+            elemento.textContent =
+                `${producto.nombre} (${producto.talla}) x ${producto.cantidad} — $${subtotal.toFixed(2)}`;
+
+            lista.appendChild(elemento);
+
+        });
+
+
+        // Mostrar total de compra
+        document.getElementById(
+            "total-checkout"
+        ).textContent = `$${total.toFixed(2)}`;
+
+
+        // Validar formulario
+        document.getElementById(
+            "formulario-compra"
+        ).addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            const resultado = document.getElementById(
+                "resultado-compra"
+            );
+
+            if (items.length === 0) {
+
+                resultado.textContent =
+                    "Tu carrito está vacío.";
+
+                return;
+
+            }
+
+            resultado.textContent =
+                "Datos validados. Esta demostración no procesa pagos ni guarda pedidos en una base de datos.";
+
+        });
+
+    </script>
+
+</body>
+</html>

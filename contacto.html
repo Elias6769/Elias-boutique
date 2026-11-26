@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contacto | Elias's Boutique</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+
+    <header class="encabezado">
+
+        <a class="logo" href="index.html">
+            Elias's Boutique
+        </a>
+    
+        <button
+            class="boton-menu"
+            id="boton-menu"
+            type="button"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+            aria-controls="menu-principal"
+        >
+            ☰
+        </button>
+    
+        <nav
+            class="navegacion"
+            id="menu-principal"
+            aria-label="Navegación principal"
+        >
+            <a href="index.html">Inicio</a>
+            <a href="productos.html">Productos</a>
+            <a href="servicios.html">Servicios</a>
+            <a class="activo" href="contacto.html">Contacto</a>
+        </nav>
+    
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+        <section class="titulo-pagina">
+
+            <p class="subtitulo">ESTAMOS PARA AYUDARTE</p>
+
+            <h1>Contáctanos</h1>
+
+            <p>Envíanos tus dudas o comentarios.</p>
+
+        </section>
+
+
+        <!-- SECCIÓN DE CONTACTO -->
+        <section class="contacto-contenedor">
+
+            <article class="informacion-contacto">
+
+                <h2>Información de contacto</h2>
+
+                <p>
+                    Completa el formulario y nos pondremos
+                    en contacto contigo.
+                </p>
+
+                <p>
+                    Gracias por visitar Elias's Boutique.
+                </p>
+
+            </article>
+
+
+            <!-- FORMULARIO -->
+            <form class="formulario" id="formulario-contacto" novalidate>
+
+                <label for="nombre">
+                    Nombre completo
+                </label>
+
+                <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    required
+                    minlength="3"
+                    maxlength="80"
+                    autocomplete="name"
+                >
+
+
+                <label for="correo">
+                    Correo electrónico
+                </label>
+
+                <input
+                    type="email"
+                    id="correo"
+                    name="correo"
+                    required
+                    maxlength="120"
+                    autocomplete="email"
+                >
+
+
+                <label for="telefono">
+                    Teléfono (10 dígitos)
+                </label>
+
+                <input
+                    type="tel"
+                    id="telefono"
+                    name="telefono"
+                    pattern="[0-9]{10}"
+                    maxlength="10"
+                    required
+                    autocomplete="tel"
+                >
+
+
+                <label for="motivo">
+                    Motivo de contacto
+                </label>
+
+                <select
+                    id="motivo"
+                    name="motivo"
+                    required
+                >
+
+                    <option value="">
+                        Selecciona una opción
+                    </option>
+
+                    <option value="productos">
+                        Consulta sobre productos
+                    </option>
+
+                    <option value="pedido">
+                        Consulta sobre pedido
+                    </option>
+
+                    <option value="otro">
+                        Otro
+                    </option>
+
+                </select>
+
+
+                <label for="mensaje">
+                    Mensaje
+                </label>
+
+                <textarea
+                    id="mensaje"
+                    name="mensaje"
+                    rows="5"
+                    required
+                    minlength="10"
+                    maxlength="1000"
+                ></textarea>
+
+
+                <button class="boton" type="submit">
+                    Enviar mensaje
+                </button>
+
+                <p
+                    id="mensaje-contacto"
+                    class="mensaje-formulario"
+                    role="status"
+                ></p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie-pagina">
+
+        <p>© 2026 Elias's Boutique. Todos los derechos reservados.</p>
+
+        <p>Estilo para cada ocasión.</p>
+
+    </footer>
+
+</body>
+</html>
